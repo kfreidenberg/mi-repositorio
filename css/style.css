@@ -1,0 +1,165 @@
+body 
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #1e1e1e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* INDEX */
+.quien-soy {
+    background-color: #EEEEEE;
+    color: #1e1e1e;
+    height: 40%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+#nombre {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 300%;
+    font-weight: bolder;
+}
+#descripcion {
+    text-align: center;
+    font-size: 100%;
+    font-weight: lighter;
+    margin-bottom: 5%;
+}
+.partes-inicio {
+    color: #EEEEEE;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.parte {
+    margin-bottom: 5%;
+}
+.redes 
+{
+    min-width: 700px;
+    display: inline-block;
+    justify-content: space-around;
+}
+.redes a {
+    margin-top: 5%;
+    font-size: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #1e1e1e;;
+    color: #EEEEEE;
+    border-radius: 50%;
+}
+footer {
+    background-color: #EEEEEE;
+    margin-bottom: 0%;
+    flex: 0 0 auto;
+}
+.pie {
+    color: #1e1e1e;
+    margin-left: 5%;
+}
+#cv {
+    justify-content: center;
+    align-self: center;
+    height: 80%;
+    width: 60%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+/* CARTAS PORTFOLIO */ 
+.card {
+    background-color: #1e1e1e;
+    color: #EEEEEE;
+    padding: 1rem;
+    height: 28rem;
+    max-width: 1000px;
+}
+.cards {
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+}
+@media (min-width: 700px) {
+    .cards { grid-template-columns: repeat(1, 6fr); }
+}
+@media (min-width: 1300px) {
+    .cards { grid-template-columns: repeat(2, 2fr); }
+}
+
+/* PROYECTO 1 */
+#proyecto1 {
+    margin-bottom: 2%;
+    color: #EEEEEE;
+    font-size: 300%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+}
+#sobre-proyecto
+{
+    color: #EEEEEE;
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 5%;
+    font-size: 100%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: lighter;
+}
+#atras {
+    margin-top: 2%;
+    margin-left: 4%;
+    font-size: 150%;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+
+/* GRID PARA PROYECTOS */
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 20%;
+    gap: 1rem;
+    grid-auto-flow: row dense;
+    margin: 2%;
+  }
+  
+  @media all and (min-width: 320px) {
+    .grid-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media all and (min-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .grid-gallery {
+      grid-template-columns: repeat(3, 2fr);
+    }
+  }
+  
+  .grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+  
+  .grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+  
+  .grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
