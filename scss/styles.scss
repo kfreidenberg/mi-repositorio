@@ -1,0 +1,259 @@
+/* VARIABLES */
+$blanco: #EEEEEE;
+$verde: #152223;
+$verde-claro: #1b2a2b;
+$rojo: #72160f;
+$rojo-oscuro: #3f0c09;
+$titulo: 300%;
+
+ /* MIXIN */
+@mixin sizes ($width, $height) {
+  width: $width;
+  height: $height;
+}
+@mixin margin ($mtop, $mright, $mbottom, $mleft) {
+  margin-top: $mtop;
+  margin-right: $mright;
+  margin-bottom: $mbottom;
+  margin-left: $mleft;
+}
+@mixin padding ($ptop, $pright, $pbottom, $pleft) {
+  padding-top: $ptop;
+  padding-right: $pright;
+  padding-bottom: $pbottom;
+  padding-left: $pleft;
+}
+
+/* GENERAL */
+body {
+  display: flex;
+  flex-direction: column;
+  @include sizes (100%, 100%);
+  background-color: $verde;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+/* INDEX */
+.quien-soy {
+    background-color: $rojo;
+    color: $blanco;
+    text-align: center;
+    @include margin (none, none, 5%, none);
+    @include sizes (100%, 40%);
+    #nombre {
+        margin-top: 100px;
+        font-size: $titulo;
+        font-weight: bolder;
+    }
+    #descripcion {
+        font-size: 100%;
+        font-weight: lighter;
+        @include margin (none, none, 5opx, none);
+        @include padding (none, 20%, none, 20%);
+    }
+}
+.partes-inicio {
+    color: $blanco;
+    @include margin (none, 5%, none, 5%);
+    .parte {
+        margin-bottom: 5%;
+        background-color: $verde-claro;
+        padding: 5%;
+        border-radius: 5%;
+    } 
+}
+.btn {
+  background-color: $rojo;
+  color: $blanco;
+  border: 0;
+  transition: 1s;
+}
+.btn:hover {
+  background-color: $rojo-oscuro;
+  scale: 110%;
+}
+@media (max-width: 768px) {  
+    .partes-inicio {
+        @include margin (none, 3%, none, 3%);
+        .parte {
+            margin-bottom: 8%;
+            h3 {
+                font-size: 130%;
+            }
+            p {
+                font-size: 100%;
+            }
+        }
+    }
+}
+
+/* FOOTER */
+footer {
+    background-color: $rojo;
+    @include sizes (100%, none);
+    margin-bottom: 0%;
+    flex: 0 0 auto;
+    padding-left: 5%;
+    #contacto {
+        color: $blanco;
+        margin-bottom: 3%;
+    }
+}
+.redes 
+{
+    min-width: 700px;
+    display: inline-block;
+    justify-content: space-around;
+    a {
+        margin-top: 5%;
+        font-size: 15px;
+        @include sizes (40px, 40px);
+        line-height: 40px;
+        text-align: center;
+        background-color: $blanco;
+        color: $verde;
+        border-radius: 50%;
+        transition: 1s;
+    }
+    a:hover {
+      scale: 120%;
+    }
+}
+
+/* CV */
+#cv {
+    justify-content: center;
+    align-self: center;
+    @include sizes (60%, 80%);
+    @include margin (100px, none, 5%, none);
+}
+@media (max-width: 650px) {
+    #cv {
+        @include sizes (80%, 80%);
+    }
+}
+form {
+  display: inline-block;
+  align-self: center;
+  justify-content: center;
+  @include margin (none, none, 5%, none);
+  h3 {
+    color: $blanco;
+    align-self: center;
+  }
+  div {
+    margin: 3%;
+    label {
+      color: $blanco;
+    } 
+  }
+}
+
+/* CARTAS PORTFOLIO */ 
+.card {
+    background-color: $verde;
+    color: $blanco;
+    padding: 1rem;
+    height: 28rem;
+    max-width: 1000px;
+    transition: 1s;
+    @include margin(0, 2%, 0, 2%)
+}
+.text {
+  max-width: 36%
+}
+.carouselExampleInterval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cards {
+    display: grid;
+    gap: 1rem;
+}
+.card:hover {
+  scale: 105%;
+}
+@media (max-width: 570px) {
+  .card {
+    height: 43rem;
+    align-content: center;
+    max-width: 400px;
+  }
+  .text{ 
+    max-width: 100%;
+    text-align: center;
+    float: none;
+}
+.carouselExampleInterval {
+  align-self: center;
+}
+}
+@media (min-width: 571px) {
+    .cards { grid-template-columns: repeat(1, 6fr); }
+}
+@media (min-width: 1200px) {
+    .cards { grid-template-columns: repeat(2, 2fr); }
+}
+
+/* PROYECTO 1 */
+#atras {
+    @include margin (90px, none, none, 4%);
+    font-size: 150%;
+    color: $blanco;
+    text-decoration: none;
+    @include sizes (40px, 40px);
+    float: left;
+    transition: 2s;
+}
+#atras:hover {
+  scale: 115%;
+}
+
+
+/* GRID PARA PROYECTOS */
+.grid-gallery {
+    display: grid;
+    grid-auto-rows: 20%;
+    gap: 2rem;
+    grid-auto-flow: row dense;
+    margin: 2%;
+  }
+  
+  @media all and (min-width: 320px) {
+    .grid-gallery {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
+  @media all and (min-width: 768px) {
+    .grid-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media all and (min-width: 1024px) {
+    .grid-gallery {
+      grid-template-columns: repeat(3, 2fr);
+    }
+  }
+  
+  .grid-gallery__item:nth-child(11n+1) {
+    grid-column: span 1;
+    grid-row: span 3;
+  }
+  
+  .grid-gallery__item:nth-child(11n+4) {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+  
+  .grid-gallery__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+  }
+  .grid-gallery__image:hover {
+    scale: 105%;
+  }
