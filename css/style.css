@@ -6,42 +6,98 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
   background-color: #152223;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  overflow-x: hidden;
 }
 
-/* INDEX */
-.quien-soy {
+/* FOOTER */
+footer {
   background-color: #72160f;
-  color: #EEEEEE;
-  text-align: center;
-  margin-top: none;
-  margin-right: none;
-  margin-bottom: 5%;
-  margin-left: none;
   width: 100%;
-  height: 40%;
+  height: none;
+  margin-bottom: 0%;
+  flex: 0 0 auto;
+  padding-left: 5%;
+}
+footer #contacto {
+  color: #EEEEEE;
+  margin-bottom: 3%;
+}
+footer .redes {
+  min-width: 700px;
+  display: inline-block;
+  justify-content: space-around;
+}
+footer .redes a {
+  margin-top: 5%;
+  font-size: 15px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #EEEEEE;
+  color: #152223;
+  border-radius: 50%;
+  transition: 1s;
+}
+footer .redes a:hover {
+  scale: 120%;
+}
+
+.quien-soy {
+  background-color: #152223;
+  color: #EEEEEE;
+  width: 80%;
+  height: auto;
+  margin-top: 80px;
+  margin-right: 0;
+  margin-bottom: 20px;
+  margin-left: 0;
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+.quien-soy #ft-cara {
+  width: 30%;
+  height: auto;
+  margin-top: 0;
+  margin-right: 5%;
+  margin-bottom: 0;
+  margin-left: 10%;
+}
+.quien-soy .textos {
+  max-width: fit-content;
+  text-align: left;
+  flex: 1;
 }
 .quien-soy #nombre {
-  margin-top: 100px;
   font-size: 300%;
   font-weight: bolder;
+  margin-bottom: 10px;
 }
 .quien-soy #descripcion {
-  font-size: 100%;
+  font-size: 150%;
   font-weight: lighter;
-  margin-top: none;
-  margin-right: none;
-  margin-bottom: 5opx;
-  margin-left: none;
-  padding-top: none;
-  padding-right: 20%;
-  padding-bottom: none;
-  padding-left: 20%;
+  margin: 0;
+}
+@media (max-width: 1200px) {
+  .quien-soy #nombre {
+    font-size: 200%;
+  }
+  .quien-soy #descripcion {
+    font-size: 100%;
+  }
 }
 
 .partes-inicio {
   color: #EEEEEE;
+  width: 90%;
+  height: object-fit;
   margin-top: none;
   margin-right: 5%;
   margin-bottom: none;
@@ -51,7 +107,7 @@ body {
   margin-bottom: 5%;
   background-color: #1b2a2b;
   padding: 5%;
-  border-radius: 5%;
+  border-radius: 20px;
 }
 
 .btn {
@@ -83,42 +139,6 @@ body {
     font-size: 100%;
   }
 }
-/* FOOTER */
-footer {
-  background-color: #72160f;
-  width: 100%;
-  height: none;
-  margin-bottom: 0%;
-  flex: 0 0 auto;
-  padding-left: 5%;
-}
-footer #contacto {
-  color: #EEEEEE;
-  margin-bottom: 3%;
-}
-
-.redes {
-  min-width: 700px;
-  display: inline-block;
-  justify-content: space-around;
-}
-.redes a {
-  margin-top: 5%;
-  font-size: 15px;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background-color: #EEEEEE;
-  color: #152223;
-  border-radius: 50%;
-  transition: 1s;
-}
-.redes a:hover {
-  scale: 120%;
-}
-
-/* CV */
 #cv {
   justify-content: center;
   align-self: center;
@@ -144,19 +164,44 @@ form {
   margin-right: none;
   margin-bottom: 5%;
   margin-left: none;
+  width: 80%;
+  height: 100%;
 }
 form h3 {
   color: #EEEEEE;
   align-self: center;
 }
 form div {
-  margin: 3%;
+  margin: 1%;
 }
 form div label {
   color: #EEEEEE;
 }
 
-/* CARTAS PORTFOLIO */
+.texto {
+  color: #EEEEEE;
+  text-align: center;
+  align-items: center;
+}
+.texto #titulo {
+  font-size: 200%;
+  font-weight: bolder;
+  margin-top: 100px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
+  margin-bottom: 10px;
+}
+.texto #subtitulo {
+  font-size: 100%;
+  font-weight: lighter;
+  margin-top: 0;
+  margin-right: 5%;
+  margin-bottom: 40px;
+  margin-left: 5%;
+}
+
+/* CARTAS */
 .card {
   background-color: #152223;
   color: #EEEEEE;
@@ -178,6 +223,7 @@ form div label {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: center;
 }
 
 .cards {
@@ -200,9 +246,6 @@ form div label {
     text-align: center;
     float: none;
   }
-  .carouselExampleInterval {
-    align-self: center;
-  }
 }
 @media (min-width: 571px) {
   .cards {
@@ -214,7 +257,6 @@ form div label {
     grid-template-columns: repeat(2, 2fr);
   }
 }
-/* PROYECTO 1 */
 #atras {
   margin-top: 90px;
   margin-right: none;

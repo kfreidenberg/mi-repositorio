@@ -28,19 +28,18 @@
               </nav>
         </header>
         <img id="cv" src="../assets/ft-cv.png" alt="Foto del currículum">
-        <form action="submit.php" method="POST">
-          <h3>¡Contactame!</h3>
-          <div>
-            <label for="name">Nombre:</label> <br>
-            <input type="text" id="name" name="name" required>
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Nombre</label>
+            <input class="form-control" type="text">
           </div>
-          <div>
-            <label for="email">Email:</label> <br>
-            <input type="email" id="email" name="email" required>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Mail</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
           </div>
-          <div>
-            <label for="message">Mensaje:</label> <br>
-            <textarea id="message" name="message" required></textarea>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Dejá tu comentario</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
           <button type="button" class="btn btn-light">Enviar</button>
         </form>
